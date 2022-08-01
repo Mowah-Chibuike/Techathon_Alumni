@@ -5,6 +5,8 @@ import useInput from "../../Hooks/use-input";
 import Button from "../../UI/Button/Button";
 import Message from "../../UI/Message/Message";
 import AuthContext from "../../Helper/auth-context/AuthContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const SignIn = () => {
   const ctx = useContext(AuthContext);
@@ -15,6 +17,7 @@ const SignIn = () => {
     hasError: false,
   });
 
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const {
@@ -86,6 +89,10 @@ const SignIn = () => {
     message = "Authentication failed";
   }
 
+  const handlePasswordEyeClick = () => {
+    setShowPassword((prev) => !prev);
+  };
+
   return (
     <Fragment>
       {errorState.msgDisplay && (
@@ -132,14 +139,21 @@ const SignIn = () => {
             }`}
           >
             <label htmlFor="Password">Password</label>
-            <input
-              id="Password"
-              name="Password"
-              type={"Password"}
-              value={enteredPassword}
-              onChange={handlePasswordChanged}
-              onBlur={handlePasswordBlurred}
-            />
+            <div className={classes.group}>
+              <input
+                id="Password"
+                name="Password"
+                type={showPassword ? "text" : "Password"}
+                value={enteredPassword}
+                onChange={handlePasswordChanged}
+                onBlur={handlePasswordBlurred}
+              />
+              <FontAwesomeIcon
+                className={classes.eye}
+                icon={!showPassword ? faEye : faEyeSlash}
+                onClick={handlePasswordEyeClick}
+              />
+            </div>
             {PasswordHasError && (
               <p className={classes.errortext}>Please enter your password</p>
             )}
