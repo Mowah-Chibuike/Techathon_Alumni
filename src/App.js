@@ -35,7 +35,7 @@ const App = () => {
       }}
     >
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path={"/register"} element={<SignUp />} />
           <Route path={"/login"} element={<SignIn />} />
