@@ -1,0 +1,58 @@
+.hero {
+  width: 100%;
+  height: 75vh;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-blend-mode: multiply;
+  background-image: url(../Homepage/pexels-antonio-batinić-4164418.jpg);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero p {
+  width: 90%;
+}
+
+.valuesList {
+  background-color: #f1f1f1;
+  padding: 1.5rem 2rem;
+}
+
+.value {
+  width: 80%;
+  padding: 3rem 1rem;
+  background-color: white;
+  border-radius: 5px;
+  margin: 25px auto;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.valueIcon {
+  text-align: center;
+  color: #4f005f;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .valuesList {
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value {
+    width: 45%;
+    padding: 3rem 1.5rem;
+  }
+}

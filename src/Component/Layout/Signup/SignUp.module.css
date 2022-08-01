@@ -1,0 +1,116 @@
+.login {
+  width: 100%;
+  text-align: left;
+
+  padding: 4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  margin-bottom: 3px;
+}
+
+p {
+  font-size: 0.85rem;
+}
+
+.login h2 {
+  margin-top: 3rem;
+}
+
+.login span {
+  color: #4f005f;
+  text-decoration: none;
+}
+
+.link {
+  color: #4f005f;
+  text-decoration: none;
+}
+
+form {
+  width: 100%;
+  padding-block: 2.5rem;
+}
+
+.control {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.control label,
+.control input {
+  display: block;
+}
+
+.control label {
+  font-weight: bold;
+  flex: 1;
+  color: #464646;
+  text-align: left;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+}
+
+.control input,
+.control select {
+  width: 100%;
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.group {
+  width: 100%;
+  position: relative;
+}
+
+.group .eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all 2s ease;
+}
+
+.control p {
+  font-size: 0.9rem;
+  color: red;
+  margin-top: 5px;
+}
+.control input:focus,
+.control select:focus {
+  outline: none;
+  border-color: #4f005f;
+  background: #f6dbfc;
+}
+
+.control.invalid input,
+.control.invalid select {
+  border-color: red;
+  background: #fbdada;
+}
+
+.actions {
+  text-align: center;
+}
+
+.submit {
+  margin-top: 25px;
+}
+
+@media (min-width: 700px) {
+  .login {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

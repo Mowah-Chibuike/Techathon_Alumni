@@ -1,0 +1,29 @@
+.FooterLinks {
+  list-style-type: none;
+  margin: 20px 0px 20px;
+}
+
+.FooterLinks li {
+  margin-block-start: 15px;
+}
+
+.FooterLinks li .link {
+  color: white;
+  border-left: 3px solid white;
+  padding-left: 8px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  .FooterLinks {
+    width: 25%;
+    margin: 0;
+    padding-inline: 2.74rem;
+  }
+
+  .FooterLinks li {
+    margin: 15px auto;
+    padding-left: 8px;
+    text-align: justify;
+  }
+}
