@@ -86,7 +86,7 @@ const SignIn = () => {
 
   let message = "Authentication successful";
   if (errorState.hasError) {
-    message = "Authentication failed";
+    message = "Invalid email or password";
   }
 
   const handlePasswordEyeClick = () => {
